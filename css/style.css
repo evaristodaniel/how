@@ -1,6 +1,7 @@
 body {
     /* Mudar cor do fundo */
     background-color: #000000!important;
+    background-image: url(../img/bg.jpg);
     /* Mudar família da fonte */
     font-family:'Montserrat', sans-serif!important;
     /* Mudar cor da fonte */
