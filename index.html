@@ -7,13 +7,11 @@
     <meta name="description" content="Daniel Corrêa">
     <meta name="author" content="Daniel Corrêa">
     <title>Daniel Corrêa</title>
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -46,7 +44,7 @@
         <div class="container-fluid bio">
             <div class="row">
                 <div class="col">
-                    <p>Oracle PL/SQL, PHP, Robot Proccess Automation.
+                    <p>Oracle PL/SQL, PHP, Robot Process Automation.
                    </p>
                    <p><a href="wa.me/+5547991970588" target="_blank" class="text-reset text-decoration-none">wa.me/5547997339249</a></p>
                 </div>
@@ -57,19 +55,90 @@
         <div class="container-fluid links">
             <div class="row">
                 <div class="col">
-                    <a href="#" target="_blank" class="botao">
-                        <p>Projetos em PHP</p>
-                    </a>
-                    <a href="#" target="_blank" class="botao">
-                        <p>Projetos Oracle PL/SQL</p>
-                    </a>
-                    <a href="#" target="_blank" class="botao">
-                        <p>Projetos RPA</p>
-                    </a>
-                    <a href="#" target="_blank" class="botao">
-                        <p>Sistemas ERP</p>
-                    </a>
-                    </a>
+
+                  <!-- Modal PHP -->
+                  <a data-toggle="modal" class="botao" id="phpBtn"><p>PHP</p></a>
+                  <!-- Conteudo do modal -->
+                  <div class="modal" tabindex="-1" id="myModal" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <p class="modal-title" style="background-color: white; color:black;">Projetos PHP</p>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-lista">
+                            <p>Sistema de agenda e controle de horários.</p>
+                            <hr>
+                            <p>Dashboards integrados com o sistema TOTVS, geração de indicadores para time de vendas.</p>
+                            <hr>
+                            <p>Painéis para a área de saúde.</p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Fim Conteudo do modal -->
+
+                  <!-- Modal Oracle -->
+                  <a data-toggle="modal" class="botao" id="orcBtn"><p>Oracle PL/SQL</p></a>
+                  <!-- Conteudo do modal -->
+                  <div class="modal" tabindex="-1" id="orcModal" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <p class="modal-title" style="background-color: white; color:black;">Projetos PHP</p>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-lista">
+                            <p>Desenvolvimento de objetos em PL/SQL.</p>
+                            <hr>
+                            <p>Criação de JOBS, Schedules e automações.</p>
+                            <hr>
+                            <p>Configuração de Middlewares Tomcat e Weblogic.</p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Fim Conteudo do modal -->
+                  <!-- Modal Oracle -->
+                  <a data-toggle="modal" class="botao" id="rpaBtn"><p>RPA</p></a>
+                  <!-- Conteudo do modal -->
+                  <div class="modal" tabindex="-1" id="rpaModal" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <p class="modal-title" style="background-color: white; color:black;">RPA</p>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-lista">
+                            <p>Automação de processos com RPA (Robot Process Automation).</p>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Fim Conteudo do modal -->
                 </div>
             </div>
         </div>
@@ -105,5 +174,21 @@
 
 
 </body>
-    <script src="js/bootstrap.js"></script>
+<script>
+$(document).ready(function(){
+  $("#phpBtn").click(function(){
+    $("#myModal").modal();
+  });
+});
+$(document).ready(function(){
+  $("#orcBtn").click(function(){
+    $("#orcModal").modal();
+  });
+});
+$(document).ready(function(){
+  $("#rpaBtn").click(function(){
+    $("#rpaModal").modal();
+  });
+});
+</script>
 </html>
